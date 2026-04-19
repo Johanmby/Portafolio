@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">Johan | Ingeniero de Sistemas & Desarrollador</title>
+    <meta name="description"
+        content="Portafolio profesional de Johan, Ingeniero de Sistemas y Desarrollador de Software.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons para iconos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="logo">JOHAN<span>.DEV</span></a>
+
+        <ul class="nav-links">
+            <li><a href="#home" class="active" data-i18n="nav_home">Inicio</a></li>
+            <li><a href="#about" data-i18n="nav_about">Sobre Mí</a></li>
+            <li><a href="#skills" data-i18n="nav_skills">Habilidades</a></li>
+            <li><a href="#projects" data-i18n="nav_projects">Proyectos</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+        </ul>
+
+        <div class="nav-controls">
+            <button id="theme-toggle" class="control-btn" aria-label="Toggle Theme">
+                <i class='bx bx-sun'></i>
+            </button>
+            <button id="lang-toggle" class="control-btn" aria-label="Toggle Language">EN</button>
+            <div class="menu-icon" id="menu-icon">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h3 class="greeting" data-i18n="hero_greeting">Hola, soy</h3>
+            <h1 class="name">Johan Benitez</h1>
+            <h2 class="role">
+                <span class="text-gradient" data-i18n="hero_role1">Ingeniero de Sistemas</span> &
+                <br><span data-i18n="hero_role2">Desarrollador de Software</span>
+            </h2>
+            <p class="description" data-i18n="hero_desc">Construyendo soluciones digitales modernas, escalables y con un
+                diseño estético de alta calidad.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn" data-i18n="hero_btn_projects">Ver Proyectos</a>
+                <a href="#contact" class="btn secondary-btn" data-i18n="hero_btn_contact">Contáctame</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Johanmby" target="_blank" rel="noopener noreferrer"><i
+                        class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/johan-manuel-ben%C3%ADtez-yaruro/?skipRedirect=true"
+                    target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://x.com/JohanmbyDEV" target="_blank" rel="noopener noreferrer"
+                    style="display: flex; align-items: center; justify-content: center;">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="glow-effect"></div>
+            <div class="image-wrapper">
+                <img src="img/foto1.png" alt="Johan Avatar">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section class="about" id="about">
+        <h2 class="section-title"><span data-i18n="about_title1">Sobre</span> <span class="highlight"
+                data-i18n="about_title2">Mí</span></h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p data-i18n="about_p1">Soy un <strong>Ingeniero de Sistemas</strong> apasionado por el desarrollo de
+                    software y las nuevas tecnologías. Me especializo en crear aplicaciones web y sistemas robustos que
+                    no solo funcionen a la perfección, sino que también ofrezcan una experiencia de usuario increíble.
+                </p>
+                <p data-i18n="about_p2">Mi enfoque se basa en la combinación de lógica limpia y diseño estético moderno.
+                    Creo que un buen software debe ser tan hermoso por fuera como lo es por dentro.</p>
+
+                <div class="stats">
+                    <div class="stat-box">
+                        <h3>2+</h3>
+                        <p data-i18n="stat_years">Años de <br>Experiencia</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>20+</h3>
+                        <p data-i18n="stat_projects">Proyectos <br>Completados</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>100%</h3>
+                        <p data-i18n="stat_clients">Satisfacción <br>del Cliente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section class="skills" id="skills">
+        <h2 class="section-title"><span data-i18n="skills_title1">Mis</span> <span class="highlight"
+                data-i18n="skills_title2">Habilidades</span></h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class='bx bxl-html5 skill-icon'></i>
+                <h3>Frontend</h3>
+                <p>HTML, CSS, JavaScript, React, TailwindCSS, Laravel</p>
+            </div>
+            <div class="skill-card">
+                <i class='bx bxl-nodejs skill-icon'></i>
+                <h3>Backend</h3>
+                <p>Node.js, Express, Python, Django.</p>
+            </div>
+            <div class="skill-card">
+                <i class='bx bx-data skill-icon'></i>
+                <h3 data-i18n="skills_db">Base de Datos</h3>
+                <p>MySQL, PostgreSQL, MongoDB, Sqlserver.</p>
+            </div>
+            <div class="skill-card">
+                <i class='bx bxl-git skill-icon'></i>
+                <h3 data-i18n="skills_tools">Herramientas</h3>
+                <p>Git, Github, Docker, Linux, AWS.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section class="projects" id="projects">
+        <h2 class="section-title"><span data-i18n="projects_title1">Proyectos</span> <span class="highlight"
+                data-i18n="projects_title2">Destacados</span></h2>
+        <div class="projects-grid">
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Proyecto 1">
+                </div>
+                <div class="project-info">
+                    <h3 data-i18n="p1_title">Dashboard Analítico</h3>
+                    <p data-i18n="p1_desc">Una plataforma de análisis de datos con gráficos en tiempo real,
+                        autenticación segura y tema oscuro moderno.</p>
+                    <div class="tech-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Chart.js</span>
+                    </div>
+                    <a href="#" class="project-link"><i class='bx bx-link-external'></i> <span data-i18n="p_link">Ver
+                            Proyecto</span></a>
+                </div>
+            </div>
+            <!-- Proyecto 2 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Proyecto 2">
+                </div>
+                <div class="project-info">
+                    <h3 data-i18n="p2_title">Plataforma E-commerce</h3>
+                    <p data-i18n="p2_desc">Tienda en línea completa con pasarela de pagos integrada, carrito dinámico y
+                        panel de administración.</p>
+                    <div class="tech-tags">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="#" class="project-link"><i class='bx bx-link-external'></i> <span data-i18n="p_link">Ver
+                            Proyecto</span></a>
+                </div>
+            </div>
+            <!-- Proyecto 3 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Proyecto 3">
+                </div>
+                <div class="project-info">
+                    <h3 data-i18n="p3_title">App de Gestión</h3>
+                    <p data-i18n="p3_desc">Sistema de gestión de tareas y proyectos para equipos remotos, con
+                        notificaciones y chat en vivo.</p>
+                    <div class="tech-tags">
+                        <span>Vue.js</span>
+                        <span>Firebase</span>
+                        <span>Tailwind</span>
+                    </div>
+                    <a href="#" class="project-link"><i class='bx bx-link-external'></i> <span data-i18n="p_link">Ver
+                            Proyecto</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section class="contact" id="contact">
+        <h2 class="section-title"><span data-i18n="contact_title1">Trabajemos</span> <span class="highlight"
+                data-i18n="contact_title2">Juntos</span></h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3 data-i18n="contact_h3">¿Tienes un proyecto en mente?</h3>
+                <p data-i18n="contact_p">Estoy disponible para trabajos freelance y nuevas oportunidades laborales.
+                    Envíame un mensaje y hablemos de tecnología.</p>
+                <div class="contact-item">
+                    <i class='bx bx-envelope'></i>
+                    <span>johanmby@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class='bx bx-map'></i>
+                    <span data-i18n="contact_location">Colombia, Sincelejo Sucre</span>
+                </div>
+            </div>
+            <form action="https://formsubmit.co/johanmby@gmail.com" method="POST" class="contact-form">
+                <!-- Evitar el captcha automático (opcional, quita esta línea si recibes spam) -->
+                <!-- <input type="hidden" name="_captcha" value="false"> -->
+                <!-- Diseño del correo -->
+                <input type="hidden" name="_template" value="table">
+
+                <div class="input-group">
+                    <input type="text" name="Nombre" data-placeholder="contact_ph_name" placeholder="Tu Nombre"
+                        required>
+                    <input type="email" name="email" data-placeholder="contact_ph_email" placeholder="Tu Email"
+                        required>
+                </div>
+                <!-- El atributo name="_subject" hace que Formsubmit use esto como el asunto del correo -->
+                <input type="text" name="_subject" data-placeholder="contact_ph_subject"
+                    placeholder="Asunto del Mensaje" required>
+                <textarea name="Mensaje" cols="30" rows="6" data-placeholder="contact_ph_msg"
+                    placeholder="Tu Mensaje..." required></textarea>
+                <button type="submit" class="btn primary-btn submit-btn"><span data-i18n="contact_btn">Enviar
+                        Mensaje</span> <i class='bx bx-send'></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p data-i18n="footer">&copy; 2026 Johan Dev. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
