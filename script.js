@@ -234,3 +234,65 @@ langToggle.addEventListener('click', () => {
     langToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
     setLanguage(currentLang);
 });
+
+// --- Integración con EmailJS ---
+(function() {
+    // Inicializar EmailJS con tu Public Key
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init({
+          publicKey: "AuBXC9BYczA6qYY7Z",
+        });
+    }
+})();
+
+const contactForm = document.getElementById('contact-form');
+const formMessage = document.getElementById('form-message');
+const submitBtn = document.getElementById('submit-btn');
+const btnText = document.getElementById('btn-text');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar recarga de página
+        
+        // Estado de carga
+        const originalText = btnText.textContent;
+        const currentLanguage = document.documentElement.getAttribute('lang') || 'es';
+        btnText.textContent = currentLanguage === 'es' ? 'Enviando...' : 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Enviar el formulario usando el Service ID y Template ID proporcionados
+        emailjs.sendForm('service_uoctmpn', 'template_6taxbjo', this)
+            .then(() => {
+                // Éxito
+                btnText.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                formMessage.style.display = 'block';
+                formMessage.style.color = '#4caf50'; // Verde (éxito)
+                formMessage.textContent = currentLanguage === 'es' 
+                    ? '¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.' 
+                    : 'Message sent successfully! I will get back to you soon.';
+                
+                // Limpiar el formulario
+                contactForm.reset();
+                
+                // Ocultar mensaje después de 5 segundos
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+                
+            }, (error) => {
+                // Error
+                console.error('EmailJS Error:', error);
+                btnText.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                formMessage.style.display = 'block';
+                formMessage.style.color = '#f44336'; // Rojo (error)
+                formMessage.textContent = currentLanguage === 'es' 
+                    ? 'Hubo un error al enviar el mensaje. Por favor, intenta de nuevo más tarde.' 
+                    : 'There was an error sending the message. Please try again later.';
+            });
+    });
+}
+

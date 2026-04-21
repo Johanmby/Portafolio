@@ -223,25 +223,22 @@
                     <span data-i18n="contact_location">Colombia, Sincelejo Sucre</span>
                 </div>
             </div>
-            <form action="https://formsubmit.co/johanmby@gmail.com" method="POST" class="contact-form">
-                <!-- Evitar el captcha automático (opcional, quita esta línea si recibes spam) -->
-                <!-- <input type="hidden" name="_captcha" value="false"> -->
-                <!-- Diseño del correo -->
-                <input type="hidden" name="_template" value="table">
-
+            <form id="contact-form" class="contact-form">
                 <div class="input-group">
-                    <input type="text" name="Nombre" data-placeholder="contact_ph_name" placeholder="Tu Nombre"
-                        required>
+                    <input type="text" name="name" data-placeholder="contact_ph_name" placeholder="Tu Nombre" required>
                     <input type="email" name="email" data-placeholder="contact_ph_email" placeholder="Tu Email"
                         required>
                 </div>
-                <!-- El atributo name="_subject" hace que Formsubmit use esto como el asunto del correo -->
-                <input type="text" name="_subject" data-placeholder="contact_ph_subject"
-                    placeholder="Asunto del Mensaje" required>
-                <textarea name="Mensaje" cols="30" rows="6" data-placeholder="contact_ph_msg"
+                <input type="text" name="subject" data-placeholder="contact_ph_subject" placeholder="Asunto del Mensaje"
+                    required>
+                <textarea name="message" cols="30" rows="6" data-placeholder="contact_ph_msg"
                     placeholder="Tu Mensaje..." required></textarea>
-                <button type="submit" class="btn primary-btn submit-btn"><span data-i18n="contact_btn">Enviar
+                <button type="submit" class="btn primary-btn submit-btn" id="submit-btn"><span id="btn-text"
+                        data-i18n="contact_btn">Enviar
                         Mensaje</span> <i class='bx bx-send'></i></button>
+                <div id="form-message"
+                    style="display: none; margin-top: 15px; text-align: center; font-weight: 500; font-size: 0.95rem;">
+                </div>
             </form>
         </div>
     </section>
@@ -251,6 +248,8 @@
         <p data-i18n="footer">&copy; 2026 Johan Dev. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 
